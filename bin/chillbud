@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+require 'chillbud'
+
+bud = Chillbud::Chillbud.new do |b|
+  b.discord_token = ENV["DISCORD_TOKEN"]
+  b.add_plugin Chillbud::Plugins::HelloPlugin.new
+end
+
+bud.start
