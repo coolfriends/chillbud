@@ -23,9 +23,7 @@ module Chillbud
         token: @discord_token,
         prefix: @prefix
       )
-      @plugins.each do |_, plugin|
-        plugin.register self
-      end
+      @plugins.each_value { |plugin| plugin.register(self) }
       @bot.run
     end
 
