@@ -41,7 +41,6 @@ module Chillbud::Plugins
       date = now.strftime("%Y-%m-%d")
       time = now.strftime("%H:%M:%S")
 
-
       s = <<~HEREDOC
             Date: #{date}
             Time: #{time}
