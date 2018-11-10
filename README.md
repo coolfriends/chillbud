@@ -25,13 +25,17 @@ Start the bot
 
     $ curl -d "{\"discord_token\":\"yourtoken\"" \ 
            -h "content-type: application/json" \
-           -x post http://localhost:80/api/v1/users 
+           -x post http://localhost:80/api/v1/start 
            
-Be warned that stopping the server has some weird behavior right now. 
-I need to rewrite the server code to start the bot as a background job so it
-doesn't hang.
+Stop the bot
 
+    $ curl -d "{\"discord_token\":\"yourtoken\"" \ 
+           -h "content-type: application/json" \
+           -x post http://localhost:80/api/v1/stop 
+           
 ## Development
+Setup [RVM](https://rvm.io/) and install a new Ruby version (>= 2.3).
+I'm using ruby-2.6.0-preview2.
 
 Download the repository
 

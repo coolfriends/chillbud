@@ -27,5 +27,9 @@ module Chillbud
       @bot.run
     end
 
+    def stop
+      @bot.stop
+    end
+
   end
 end
