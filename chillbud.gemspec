@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "discordrb"
   spec.add_dependency "open-weather"
   spec.add_dependency "roda"
+  spec.add_dependency "sucker_punch"
 
   spec.add_development_dependency "puma"
   spec.add_development_dependency "bundler", "~> 1.16"

@@ -19,7 +19,7 @@ Check the available Rake tasks
 
 Start the server
 
-    $ sudo bundle exec puma config.ru -p 80 
+    $ bundle exec puma config.ru -p 80 
 
 Start the bot
 

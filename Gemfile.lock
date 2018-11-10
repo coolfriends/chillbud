@@ -5,11 +5,13 @@ PATH
       discordrb
       open-weather
       roda
+      sucker_punch
 
 GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.2)
+    concurrent-ruby (1.1.3)
     diff-lcs (1.3)
     discordrb (3.3.0)
       discordrb-webhooks (~> 3.3.0)
@@ -67,6 +69,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
     rspec-support (3.8.0)
+    sucker_punch (2.1.1)
+      concurrent-ruby (~> 1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)

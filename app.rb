@@ -2,6 +2,7 @@
 require 'roda'
 require 'json'
 require 'chillbud'
+require_relative './lib/chillbud/jobs/start_job'
 
 class ChillbudApp < Roda
   plugin :json
@@ -16,11 +17,11 @@ class ChillbudApp < Roda
           r.post do
             j = JSON.parse r.body.read
             discord_token = j['discord_token']
-            bud = Chillbud::Chillbud.new do |c|
-              c.discord_token = discord_token
-              c.add_plugin(Chillbud::Plugins::HelloPlugin.new)
-            end
-            bud.start
+            Chillbud::Jobs::StartJob.perform_async(
+              {
+                discord_token: discord_token
+              }
+            )
             {
               message: "Successfully started bot",
               discord_token: discord_token
