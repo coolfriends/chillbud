@@ -4,6 +4,7 @@ PATH
     chillbud (0.1.0)
       discordrb
       open-weather
+      roda
 
 GEM
   remote: https://rubygems.org/
@@ -39,6 +40,10 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    puma (3.12.0)
+    rack (2.0.6)
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rake (10.5.0)
     rbnacl (3.4.0)
       ffi
@@ -47,6 +52,8 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    roda (3.13.0)
+      rack
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -75,8 +82,10 @@ DEPENDENCIES
   bundler (~> 1.16)
   chillbud!
   pry
+  puma
+  rack-test
   rake (~> 10.0)
-  rspec (~> 3.0)
+  rspec
 
 BUNDLED WITH
    1.16.6

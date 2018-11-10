@@ -1,1 +1,1 @@
-* Fix WeatherPlugin to respond with results from US when Denton, TX is given.
+* Use https://github.com/alexreisner/geocoder and https://github.com/darkskyapp/forecast-ruby to get WeatherPlugin to return correct city data

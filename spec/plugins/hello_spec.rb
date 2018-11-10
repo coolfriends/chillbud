@@ -1,6 +1,7 @@
+require 'spec_helper'
 require 'chillbud/plugins/hello'
 
-RSpec.describe HelloPlugin do
+describe Chillbud::Plugins::HelloPlugin do
   it 'can be initalized' do
     expect(Chillbud::Plugins::HelloPlugin).to_not be nil
   end

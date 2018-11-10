@@ -1,10 +1,11 @@
-# Chillbud
+# chillbud
 
-A Discord bot
+A discord bot with a web interface
 
 ## Installation
 Download this repo and install
 
+    $ git clone https://github.com/coolfriends/chillbud.git
     $ bundle install
 
 ## Usage
@@ -12,16 +13,49 @@ Add the DISCORD_TOKEN environment variable.
 
     $ chillbud
 
+Check the available Rake tasks
+
+    $ bundle exec rake -T
+
+Start the server
+
+    $ sudo bundle exec puma config.ru -p 80 
+
+Start the bot
+
+    $ curl -d "{\"discord_token\":\"yourtoken\"" \ 
+           -h "content-type: application/json" \
+           -x post http://localhost:80/api/v1/users 
+           
+Be warned that stopping the server has some weird behavior right now. 
+I need to rewrite the server code to start the bot as a background job so it
+doesn't hang.
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Download the repository
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+    $ git clone https://github.com/coolfriends/chillbud.git
 
-## Contributing
+Make a new feature branch
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/chillbud.
+    $ git checkout -b my-cool-feature
+
+Make your changes and test
+
+    $ bundle exec rake
+
+Make your changes and commit them
+
+    $ git commit -am "Wow I really did it"
+
+Push your changes to your feature branch
+
+    $ git push origin my-cool-feature
+
+
+Then make your pull request in GitHub.
+[See this for more information](https://yangsu.github.io/pull-request-tutorial/)
 
 ## License
 

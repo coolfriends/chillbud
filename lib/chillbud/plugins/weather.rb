@@ -18,7 +18,7 @@ module Chillbud::Plugins
     def register(bud)
       @bud = bud
       bud.bot.command(@command.to_sym, usage: @usage) do |event|
-        city = event.message.content.split[1..].join(' ')
+        city = event.message.content.split
         run(event, city)
       end
     end

@@ -1,4 +1,5 @@
 require "bundler/setup"
+require "rspec/core"
 require "chillbud"
 
 RSpec.configure do |config|
