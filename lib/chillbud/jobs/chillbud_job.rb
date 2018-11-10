@@ -4,12 +4,12 @@ require "chillbud"
 module Chillbud
   module Jobs
     class ChillbudJob
+      include SuckerPunch::Job
+
       @buds = {}
       class << self
         attr_accessor :buds
       end
-
-      include SuckerPunch::Job
 
       def perform(data)
         action = data[:action]
