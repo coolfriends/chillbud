@@ -1,9 +1,15 @@
 require "rspec/core"
 require "rspec/core/rake_task"
 
+require 'rake'
+require 'rspec/core/rake_task'
+require 'coveralls/rake/task'
+
+desc 'Run RSpec'
 RSpec::Core::RakeTask.new do |t|
-  t.pattern = 'spec/**/*_spec.rb'
-  t.ruby_opts = '-w'
+  t.verbose = false
 end
 
-task default: %i[spec]
+Coveralls::RakeTask.new
+task default: :spec
+

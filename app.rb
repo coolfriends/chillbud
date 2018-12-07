@@ -20,7 +20,7 @@ class ChillbudApp < Roda
             Chillbud::Jobs::ChillbudJob.perform_async(
               {
                 action: :start,
-                discord_token: discord_token
+                discord_token: discord_token,
               }
             )
             {

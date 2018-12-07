@@ -11,6 +11,10 @@ Download this repo and install
 ## Usage
 Add the DISCORD_TOKEN environment variable.
 
+    $ export DISCORD_TOKEN=yourtoken
+    
+Start the bot as a CLI (not the server)
+
     $ chillbud
 
 Check the available Rake tasks
