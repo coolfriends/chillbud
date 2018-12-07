@@ -17,10 +17,9 @@ module Chillbud::Plugins
     # Register this plugin to respond to a command.
     def register(bud)
       @bud = bud
-      bud.bot.command @command.to_sym do |event|
+      bud.bot.command(@command.to_sym) do |event|
         run(event)
       end
     end
-
   end
 end

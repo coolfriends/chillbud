@@ -1,11 +1,12 @@
+require 'chillbud'
+
 RSpec.describe Chillbud do
   it "has a version number" do
     expect(Chillbud::VERSION).not_to be nil
   end
 
   it "can be configured with a block" do
-    bud = Chillbud::Chillbud.new do |b|
-      b.discord_token = "mytoken"
+    bud = Chillbud::Chillbud.new("mytoken") do |b|
       b.prefix = "~"
     end
     expect(bud.discord_token).to eq("mytoken")

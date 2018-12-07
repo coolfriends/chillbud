@@ -1,4 +1,4 @@
-require 'chillbud/plugins/plugin'
+require_relative './plugin'
 
 module Chillbud::Plugins
   class HelloPlugin < Plugin

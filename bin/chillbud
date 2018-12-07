@@ -1,13 +1,9 @@
 #!/usr/bin/env ruby
-require 'chillbud'
+require_relative '../lib/chillbud'
 
-bud = Chillbud::Chillbud.new do |b|
-  b.discord_token = ENV["DISCORD_TOKEN"]
-  b.add_plugin Chillbud::Plugins::HelloPlugin.new
-  weather_plugin = Chillbud::Plugins::WeatherPlugin.new do |p|
-    p.api_token = ENV["OPEN_WEATHER_MAP_API_KEY"]
-  end
-  b.add_plugin(weather_plugin)
+bud = Chillbud::Chillbud.new(ENV["DISCORD_TOKEN"]) do |b|
+  b.plugin :hello
+  b.plugin :reminder
 end
 
 bud.start
