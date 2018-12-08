@@ -1,7 +1,5 @@
-require "rspec/core"
-require "rspec/core/rake_task"
-
 require 'rake'
+require 'rspec/core'
 require 'rspec/core/rake_task'
 require 'coveralls/rake/task'
 
@@ -12,4 +10,3 @@ end
 
 Coveralls::RakeTask.new
 task default: :spec
-
