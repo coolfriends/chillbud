@@ -31,7 +31,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "discordrb"
-  spec.add_dependency "open-weather"
   spec.add_dependency "roda"
   spec.add_dependency "sucker_punch"
   spec.add_dependency "puma"

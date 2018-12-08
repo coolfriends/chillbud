@@ -15,8 +15,7 @@ class ChillbudApp < Roda
         # /api/v1/start
         r.on 'start' do
           r.post do
-            j = JSON.parse r.body.read
-            discord_token = j['discord_token']
+            discord_token = r.params.fetch('discord_token')
             Chillbud::Jobs::ChillbudJob.perform_async(
               {
                 action: :start,
@@ -31,8 +30,7 @@ class ChillbudApp < Roda
         end
         r.on 'stop' do
           r.post do
-            j = JSON.parse r.body.read
-            discord_token = j['discord_token']
+            discord_token = r.params.fetch('discord_token')
             Chillbud::Jobs::ChillbudJob.perform_async(
               {
                 action: :stop,
