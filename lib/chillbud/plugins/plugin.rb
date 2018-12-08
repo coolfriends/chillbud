@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Chillbud
   module Plugins
     # Base class for a Chillbud plugin.

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative './plugin'
 
 module Chillbud
@@ -5,7 +7,7 @@ module Chillbud
     # Plugin definition
     class HelloPlugin < Plugin
       def initialize
-        @command = "hello"
+        @command = 'hello'
       end
 
       def run(event)

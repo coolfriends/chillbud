@@ -1,5 +1,8 @@
 # Default rubocop confiugration for Chillbud
 
+AllCops:
+  TargetRubyVersion: 2.5
+
 Metrics/BlockLength:
   Max: 30
 

@@ -23,7 +23,7 @@ Check the available Rake tasks
 
 Start the server
 
-    $ bundle exec puma config.ru -p 80 
+    $ bundle exec puma config.ru -p 3000
 
 Start the bot
 
@@ -46,10 +46,14 @@ Download the repository
 Make a new feature branch
 
     $ git checkout -b my-cool-feature
-
+    
 Make your changes and test
 
     $ bundle exec rake
+    
+Format your changes before commit (autoformats even if Rubocop fails)
+
+    $ bundle exec rake rubocop
 
 Make your changes and commit them
 

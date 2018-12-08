@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app.rb
 require 'chillbud'
 require 'json'

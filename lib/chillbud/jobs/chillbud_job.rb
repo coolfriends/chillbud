@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sucker_punch'
 require_relative '../chillbud'
 require_relative '../plugins/hello'
@@ -15,6 +17,7 @@ module Chillbud
       def perform(data)
         action = data[:action]
         return start_bud(data) if action == :start
+
         stop_bud(data) if action == :stop
       end
 
@@ -32,7 +35,7 @@ module Chillbud
       def stop_bud(data)
         token = data[:discord_token]
         puts "Stopping bot with token: #{token}"
-        ChillbudJob.buds[token].stop if ChillbudJob.buds[token]
+        ChillbudJob.buds[token]&.stop
         ChillbudJob.buds[token] = nil
       end
     end
