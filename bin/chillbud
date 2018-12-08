@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require_relative '../lib/chillbud'
 
-bud = Chillbud::Chillbud.new(ENV["DISCORD_TOKEN"]) do |b|
+bud = Chillbud::Chillbud.new(ENV['DISCORD_TOKEN']) do |b|
   b.plugin :hello
   b.plugin :reminder
 end
