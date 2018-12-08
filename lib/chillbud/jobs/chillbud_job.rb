@@ -1,6 +1,6 @@
-require "sucker_punch"
-require_relative "../chillbud"
-require_relative "../plugins/hello"
+require 'sucker_punch'
+require_relative '../chillbud'
+require_relative '../plugins/hello'
 
 module Chillbud
   module Jobs

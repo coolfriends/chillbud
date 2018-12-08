@@ -20,11 +20,11 @@ module Chillbud
   #   bud.start
   #
   class Chillbud
-    attr_reader :discord_token
     attr_reader :bot
+    attr_reader :discord_token
     attr_accessor :prefix
 
-    def initialize(discord_token = nil, prefix = "!")
+    def initialize(discord_token = nil, prefix = '!')
       @discord_token = discord_token
       @prefix = prefix
       @plugins = {}
@@ -62,9 +62,9 @@ module Chillbud
     def start
       @bot.run(async: :async)
 
-      while true
+      loop do
         run_hooks :on_refresh
-        puts "Refreshing..."
+        puts 'Refreshing...'
         sleep @refresh_interval
       end
     end

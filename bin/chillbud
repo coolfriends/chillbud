@@ -2,6 +2,7 @@
 require_relative '../lib/chillbud'
 
 bud = Chillbud::Chillbud.new(ENV['DISCORD_TOKEN']) do |b|
+  # Initialize plugins here
   b.plugin :hello
   b.plugin :reminder
 end
