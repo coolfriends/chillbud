@@ -20,9 +20,9 @@ module Chillbud
 
       def start_bud(data)
         token = data[:discord_token]
-        bud = Chillbud.new do |c|
-          c.discord_token = token
-          c.add_plugin(Plugins::HelloPlugin.new)
+        bud = Chillbud.new(token) do |c|
+          c.plugin :hello
+          c.plugin :reminder
         end
         ChillbudJob.buds[token] = bud
         puts "Starting bot with token: #{token}"

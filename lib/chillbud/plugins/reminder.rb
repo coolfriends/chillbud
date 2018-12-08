@@ -72,9 +72,10 @@ module Chillbud
           end
         end
 
-        unless removed.empty? removed.each do |reminder|
-                 @reminders.delete(reminder)
-               end
+        unless removed.empty?
+          removed.each do |reminder|
+            @reminders.delete(reminder)
+          end
         end
       end
     end

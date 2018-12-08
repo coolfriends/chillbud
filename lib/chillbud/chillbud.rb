@@ -76,7 +76,7 @@ module Chillbud
 
     # Execute the hook for every plugin.
     def run_hooks(sym)
-      @plugins.each_value(sym)
+      @plugins.each_value(&sym)
     end
   end
 end
