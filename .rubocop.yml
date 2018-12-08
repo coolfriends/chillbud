@@ -1,0 +1,13 @@
+# Default rubocop confiugration for Chillbud
+
+Metrics/BlockLength:
+  Max: 30
+
+Metrics/ClassLength:
+  Max: 1500
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
