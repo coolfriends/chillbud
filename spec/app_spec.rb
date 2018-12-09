@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 require 'rack/test'
 require_relative '../app'
 
 ENV['RACK_ENV'] = 'test'
-
-
 
 RSpec.describe 'ChillbudApp' do
   include Rack::Test::Methods

@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 require_relative '../lib/chillbud'
 
-bud = Chillbud::Chillbud.new(ENV["DISCORD_TOKEN"]) do |b|
+bud = Chillbud::Chillbud.new(ENV['DISCORD_TOKEN']) do |b|
+  # Initialize plugins here
   b.plugin :hello
   b.plugin :reminder
 end

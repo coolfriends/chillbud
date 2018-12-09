@@ -23,19 +23,17 @@ Check the available Rake tasks
 
 Start the server
 
-    $ bundle exec puma config.ru -p 80 
+    $ bundle exec puma config.ru -p 3000
 
 Start the bot
 
-    $ curl -d "{\"discord_token\":\"yourtoken\"" \ 
-           -h "content-type: application/json" \
-           -x post http://localhost:80/api/v1/start 
-           
+    curl -d "discord_token=$DISCORD_TOKEN" -X POST \
+         http://localhost:3000/api/v1/start
+
 Stop the bot
 
-    $ curl -d "{\"discord_token\":\"yourtoken\"" \ 
-           -h "content-type: application/json" \
-           -x post http://localhost:80/api/v1/stop 
+    curl -d "discord_token=$DISCORD_TOKEN" -X POST \
+         http://localhost:3000/api/v1/stop
            
 ## Development
 Setup [RVM](https://rvm.io/) and install a new Ruby version (>= 2.3).
@@ -48,10 +46,14 @@ Download the repository
 Make a new feature branch
 
     $ git checkout -b my-cool-feature
-
+    
 Make your changes and test
 
     $ bundle exec rake
+    
+Format your changes before commit (autoformats even if Rubocop fails)
+
+    $ bundle exec rake rubocop
 
 Make your changes and commit them
 
